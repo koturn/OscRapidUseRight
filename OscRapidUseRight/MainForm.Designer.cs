@@ -28,66 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this._labelHost = new System.Windows.Forms.Label();
-            this._labelPort = new System.Windows.Forms.Label();
+            System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
+            System.Windows.Forms.Label labelHost;
+            System.Windows.Forms.Label labelPort;
+            System.Windows.Forms.Label labelInterval;
+            System.Windows.Forms.NumericUpDown numericUpDownInterval;
             this._textBoxHost = new System.Windows.Forms.TextBox();
             this._numericUpDownPort = new System.Windows.Forms.NumericUpDown();
             this._buttonStartStop = new System.Windows.Forms.Button();
-            this._labelInterval = new System.Windows.Forms.Label();
-            this._numericUpDownInterval = new System.Windows.Forms.NumericUpDown();
-            this._tableLayoutPanel.SuspendLayout();
+            tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            labelHost = new System.Windows.Forms.Label();
+            labelPort = new System.Windows.Forms.Label();
+            labelInterval = new System.Windows.Forms.Label();
+            numericUpDownInterval = new System.Windows.Forms.NumericUpDown();
+            tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownPort)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._numericUpDownInterval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(numericUpDownInterval)).BeginInit();
             this.SuspendLayout();
             // 
-            // _tableLayoutPanel
+            // tableLayoutPanel
             // 
-            this._tableLayoutPanel.AutoSize = true;
-            this._tableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this._tableLayoutPanel.ColumnCount = 2;
-            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this._tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this._tableLayoutPanel.Controls.Add(this._labelHost, 0, 0);
-            this._tableLayoutPanel.Controls.Add(this._labelPort, 0, 1);
-            this._tableLayoutPanel.Controls.Add(this._textBoxHost, 1, 0);
-            this._tableLayoutPanel.Controls.Add(this._numericUpDownPort, 1, 1);
-            this._tableLayoutPanel.Controls.Add(this._buttonStartStop, 1, 3);
-            this._tableLayoutPanel.Controls.Add(this._labelInterval, 0, 3);
-            this._tableLayoutPanel.Controls.Add(this._numericUpDownInterval, 1, 3);
-            this._tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this._tableLayoutPanel.Name = "_tableLayoutPanel";
-            this._tableLayoutPanel.RowCount = 3;
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this._tableLayoutPanel.Size = new System.Drawing.Size(304, 121);
-            this._tableLayoutPanel.TabIndex = 0;
+            tableLayoutPanel.AutoSize = true;
+            tableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            tableLayoutPanel.ColumnCount = 2;
+            tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel.Controls.Add(labelHost, 0, 0);
+            tableLayoutPanel.Controls.Add(labelPort, 0, 1);
+            tableLayoutPanel.Controls.Add(this._textBoxHost, 1, 0);
+            tableLayoutPanel.Controls.Add(this._numericUpDownPort, 1, 1);
+            tableLayoutPanel.Controls.Add(this._buttonStartStop, 1, 3);
+            tableLayoutPanel.Controls.Add(labelInterval, 0, 3);
+            tableLayoutPanel.Controls.Add(numericUpDownInterval, 1, 3);
+            tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            tableLayoutPanel.Name = "tableLayoutPanel";
+            tableLayoutPanel.RowCount = 3;
+            tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel.Size = new System.Drawing.Size(304, 121);
+            tableLayoutPanel.TabIndex = 0;
             // 
-            // _labelHost
+            // labelHost
             // 
-            this._labelHost.AutoSize = true;
-            this._labelHost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._labelHost.Location = new System.Drawing.Point(3, 0);
-            this._labelHost.Name = "_labelHost";
-            this._labelHost.Size = new System.Drawing.Size(72, 25);
-            this._labelHost.TabIndex = 1;
-            this._labelHost.Text = "Host:";
-            this._labelHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelHost.AutoSize = true;
+            labelHost.Dock = System.Windows.Forms.DockStyle.Fill;
+            labelHost.Location = new System.Drawing.Point(3, 0);
+            labelHost.Name = "labelHost";
+            labelHost.Size = new System.Drawing.Size(72, 25);
+            labelHost.TabIndex = 1;
+            labelHost.Text = "Host:";
+            labelHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // _labelPort
+            // labelPort
             // 
-            this._labelPort.AutoSize = true;
-            this._labelPort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._labelPort.Location = new System.Drawing.Point(3, 25);
-            this._labelPort.Name = "_labelPort";
-            this._labelPort.Size = new System.Drawing.Size(72, 25);
-            this._labelPort.TabIndex = 3;
-            this._labelPort.Text = "Port:";
-            this._labelPort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelPort.AutoSize = true;
+            labelPort.Dock = System.Windows.Forms.DockStyle.Fill;
+            labelPort.Location = new System.Drawing.Point(3, 25);
+            labelPort.Name = "labelPort";
+            labelPort.Size = new System.Drawing.Size(72, 25);
+            labelPort.TabIndex = 3;
+            labelPort.Text = "Port:";
+            labelPort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _textBoxHost
             // 
@@ -118,7 +123,7 @@
             // 
             // _buttonStartStop
             // 
-            this._tableLayoutPanel.SetColumnSpan(this._buttonStartStop, 2);
+            tableLayoutPanel.SetColumnSpan(this._buttonStartStop, 2);
             this._buttonStartStop.Dock = System.Windows.Forms.DockStyle.Fill;
             this._buttonStartStop.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this._buttonStartStop.Location = new System.Drawing.Point(3, 78);
@@ -129,40 +134,40 @@
             this._buttonStartStop.UseVisualStyleBackColor = true;
             this._buttonStartStop.Click += new System.EventHandler(this.ButtonStartStop_Click);
             // 
-            // _labelInterval
+            // labelInterval
             // 
-            this._labelInterval.AutoSize = true;
-            this._labelInterval.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._labelInterval.Location = new System.Drawing.Point(3, 50);
-            this._labelInterval.Name = "_labelInterval";
-            this._labelInterval.Size = new System.Drawing.Size(72, 25);
-            this._labelInterval.TabIndex = 5;
-            this._labelInterval.Text = "Interval (ms):";
-            this._labelInterval.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            labelInterval.AutoSize = true;
+            labelInterval.Dock = System.Windows.Forms.DockStyle.Fill;
+            labelInterval.Location = new System.Drawing.Point(3, 50);
+            labelInterval.Name = "labelInterval";
+            labelInterval.Size = new System.Drawing.Size(72, 25);
+            labelInterval.TabIndex = 5;
+            labelInterval.Text = "Interval (ms):";
+            labelInterval.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // _numericUpDownInterval
+            // numericUpDownInterval
             // 
-            this._numericUpDownInterval.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._numericUpDownInterval.Location = new System.Drawing.Point(81, 53);
-            this._numericUpDownInterval.Maximum = new decimal(new int[] {
+            numericUpDownInterval.Dock = System.Windows.Forms.DockStyle.Fill;
+            numericUpDownInterval.Location = new System.Drawing.Point(81, 53);
+            numericUpDownInterval.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this._numericUpDownInterval.Minimum = new decimal(new int[] {
+            numericUpDownInterval.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this._numericUpDownInterval.Name = "_numericUpDownInterval";
-            this._numericUpDownInterval.Size = new System.Drawing.Size(220, 19);
-            this._numericUpDownInterval.TabIndex = 6;
-            this._numericUpDownInterval.Value = new decimal(new int[] {
+            numericUpDownInterval.Name = "numericUpDownInterval";
+            numericUpDownInterval.Size = new System.Drawing.Size(220, 19);
+            numericUpDownInterval.TabIndex = 6;
+            numericUpDownInterval.Value = new decimal(new int[] {
             16,
             0,
             0,
             0});
-            this._numericUpDownInterval.ValueChanged += new System.EventHandler(this.NumericUpDownInterval_ValueChanged);
+            numericUpDownInterval.ValueChanged += new System.EventHandler(this.NumericUpDownInterval_ValueChanged);
             // 
             // MainForm
             // 
@@ -170,30 +175,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(304, 121);
-            this.Controls.Add(this._tableLayoutPanel);
+            this.Controls.Add(tableLayoutPanel);
             this.Name = "MainForm";
             this.Text = "OSC Rapid UseRight";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this._tableLayoutPanel.ResumeLayout(false);
-            this._tableLayoutPanel.PerformLayout();
+            tableLayoutPanel.ResumeLayout(false);
+            tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownPort)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._numericUpDownInterval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(numericUpDownInterval)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel _tableLayoutPanel;
-        private System.Windows.Forms.Label _labelHost;
-        private System.Windows.Forms.Label _labelPort;
         private System.Windows.Forms.TextBox _textBoxHost;
         private System.Windows.Forms.NumericUpDown _numericUpDownPort;
         private System.Windows.Forms.Button _buttonStartStop;
-        private System.Windows.Forms.Label _labelInterval;
-        private System.Windows.Forms.NumericUpDown _numericUpDownInterval;
     }
 }
 

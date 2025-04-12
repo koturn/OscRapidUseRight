@@ -38,7 +38,7 @@ namespace OscRapidUseRight
         {
             var thread = new Thread(param =>
             {
-                var client = (UdpClient)param;
+                var client = (UdpClient)param!;
                 var pressData = Encoding.ASCII.GetBytes("/input/UseRight\x00,i\x00\x00\x00\x00\x00\x01");
                 var releaseData = Encoding.ASCII.GetBytes("/input/UseRight\x00,i\x00\x00\x00\x00\x00\x00");
                 try

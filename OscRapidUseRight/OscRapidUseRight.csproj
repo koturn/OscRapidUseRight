@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net481</TargetFramework>
+    <TargetFrameworks>net9.0-windows;net481</TargetFrameworks>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>13</LangVersion>
     <Nullable>enable</Nullable>
@@ -16,6 +16,14 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Windows;VRChat</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
   </PropertyGroup>
 
 </Project>

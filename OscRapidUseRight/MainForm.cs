@@ -15,7 +15,7 @@ namespace OscRapidUseRight
         /// <summary>
         /// Thread alternating 0's and 1's sent to "/input/UseRight".
         /// </summary>
-        private Thread _thread;
+        private Thread? _thread;
         /// <summary>
         /// Send interval (milliseconds).
         /// </summary>

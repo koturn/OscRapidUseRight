@@ -1,6 +1,8 @@
 using System;
 using System.Net.Sockets;
+#if !NET6_0_OR_GREATER
 using System.Text;
+#endif  // !NET6_0_OR_GREATER
 using System.Threading;
 using System.Windows.Forms;
 
@@ -39,16 +41,28 @@ namespace OscRapidUseRight
             var thread = new Thread(param =>
             {
                 var client = (UdpClient)param!;
+#if NET6_0_OR_GREATER
+                var pressData = "/input/UseRight\x00,i\x00\x00\x00\x00\x00\x01"u8;
+                var releaseData = "/input/UseRight\x00,i\x00\x00\x00\x00\x00\x00"u8;
+#else
                 var pressData = Encoding.ASCII.GetBytes("/input/UseRight\x00,i\x00\x00\x00\x00\x00\x01");
                 var releaseData = Encoding.ASCII.GetBytes("/input/UseRight\x00,i\x00\x00\x00\x00\x00\x00");
+#endif  // NET6_0_OR_GREATER
                 try
                 {
                     while (true)
                     {
+#if NET6_0_OR_GREATER
+                        client.Send(pressData);
+                        Thread.Sleep(_interval);
+                        client.Send(releaseData);
+                        Thread.Sleep(_interval);
+#else
                         client.Send(pressData, pressData.Length);
                         Thread.Sleep(_interval);
                         client.Send(releaseData, releaseData.Length);
                         Thread.Sleep(_interval);
+#endif  // NET6_0_OR_GREATER
                     }
                 }
                 catch (ThreadInterruptedException)
@@ -57,7 +71,11 @@ namespace OscRapidUseRight
                 }
                 finally
                 {
+#if NET6_0_OR_GREATER
+                    client.Send(releaseData);
+#else
                     client.Send(releaseData, releaseData.Length);
+#endif  // NET6_0_OR_GREATER
                     client.Dispose();
                 }
             })

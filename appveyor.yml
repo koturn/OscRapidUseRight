@@ -5,14 +5,14 @@ environment:
 init:
 - cmd: '"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"'
 install:
-- cmd: nmake restore
+- cmd: nmake /nologo restore
 build_script:
 - cmd: >-
-    nmake
+    nmake /nologo
 
-    nmake deploy
+    nmake /nologo deploy
 
-    nmake deploy-net481
+    nmake /nologo deploy-net481
 artifacts:
 - path: $(SOLUTION_NAME)-net9.0.zip
   name: .NET 9 binary

@@ -125,10 +125,10 @@ namespace OscRapidUseRight
         }
 
         /// <summary>
-        /// <para>Called when the value of <see cref="_numericUpDownInterval"/> changed.</para>
+        /// <para>Called when the value of <see cref="NumericUpDown"/> of interval is changed.</para>
         /// <para>Copy the value to <see cref="_interval"/>.</para>
         /// </summary>
-        /// <param name="sender"><see cref="_numericUpDownInterval"/></param>
+        /// <param name="sender"><see cref="NumericUpDown"/> of interval.</param>
         /// <param name="e">Empty event data.</param>
         private void NumericUpDownInterval_ValueChanged(object sender, EventArgs e)
         {

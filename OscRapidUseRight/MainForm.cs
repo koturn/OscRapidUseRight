@@ -92,7 +92,7 @@ namespace OscRapidUseRight
         /// </summary>
         /// <param name="thread">Thread to stop.</param>
         /// <param name="timeout">Wait timeout for stopping the thread.</param>
-        private void StopThread(Thread thread, int timeout = 1000)
+        private static void StopThread(Thread thread, int timeout = 1000)
         {
             thread.Interrupt();
             thread.Join(timeout);

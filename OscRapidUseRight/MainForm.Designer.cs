@@ -1,4 +1,4 @@
-﻿namespace OscRapidUseRight
+namespace OscRapidUseRight
 {
     partial class MainForm
     {
@@ -32,19 +32,18 @@
             System.Windows.Forms.Label labelHost;
             System.Windows.Forms.Label labelPort;
             System.Windows.Forms.Label labelInterval;
-            System.Windows.Forms.NumericUpDown numericUpDownInterval;
-            this._textBoxHost = new System.Windows.Forms.TextBox();
-            this._numericUpDownPort = new System.Windows.Forms.NumericUpDown();
-            this._buttonStartStop = new System.Windows.Forms.Button();
+            _textBoxHost = new System.Windows.Forms.TextBox();
+            _numericUpDownPort = new System.Windows.Forms.NumericUpDown();
+            _buttonStartStop = new System.Windows.Forms.Button();
+            _numericUpDownInterval = new System.Windows.Forms.NumericUpDown();
             tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             labelHost = new System.Windows.Forms.Label();
             labelPort = new System.Windows.Forms.Label();
             labelInterval = new System.Windows.Forms.Label();
-            numericUpDownInterval = new System.Windows.Forms.NumericUpDown();
             tableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._numericUpDownPort)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(numericUpDownInterval)).BeginInit();
-            this.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)_numericUpDownPort).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)_numericUpDownInterval).BeginInit();
+            SuspendLayout();
             // 
             // tableLayoutPanel
             // 
@@ -55,30 +54,32 @@
             tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             tableLayoutPanel.Controls.Add(labelHost, 0, 0);
             tableLayoutPanel.Controls.Add(labelPort, 0, 1);
-            tableLayoutPanel.Controls.Add(this._textBoxHost, 1, 0);
-            tableLayoutPanel.Controls.Add(this._numericUpDownPort, 1, 1);
-            tableLayoutPanel.Controls.Add(this._buttonStartStop, 1, 3);
+            tableLayoutPanel.Controls.Add(_textBoxHost, 1, 0);
+            tableLayoutPanel.Controls.Add(_numericUpDownPort, 1, 1);
+            tableLayoutPanel.Controls.Add(_buttonStartStop, 1, 3);
             tableLayoutPanel.Controls.Add(labelInterval, 0, 3);
-            tableLayoutPanel.Controls.Add(numericUpDownInterval, 1, 3);
+            tableLayoutPanel.Controls.Add(_numericUpDownInterval, 1, 3);
             tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            tableLayoutPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tableLayoutPanel.Name = "tableLayoutPanel";
             tableLayoutPanel.RowCount = 3;
             tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            tableLayoutPanel.Size = new System.Drawing.Size(304, 121);
+            tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            tableLayoutPanel.Size = new System.Drawing.Size(355, 151);
             tableLayoutPanel.TabIndex = 0;
             // 
             // labelHost
             // 
             labelHost.AutoSize = true;
             labelHost.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelHost.Location = new System.Drawing.Point(3, 0);
+            labelHost.Location = new System.Drawing.Point(4, 0);
+            labelHost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             labelHost.Name = "labelHost";
-            labelHost.Size = new System.Drawing.Size(72, 25);
+            labelHost.Size = new System.Drawing.Size(75, 31);
             labelHost.TabIndex = 1;
             labelHost.Text = "Host:";
             labelHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -87,105 +88,92 @@
             // 
             labelPort.AutoSize = true;
             labelPort.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelPort.Location = new System.Drawing.Point(3, 25);
+            labelPort.Location = new System.Drawing.Point(4, 31);
+            labelPort.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             labelPort.Name = "labelPort";
-            labelPort.Size = new System.Drawing.Size(72, 25);
+            labelPort.Size = new System.Drawing.Size(75, 31);
             labelPort.TabIndex = 3;
             labelPort.Text = "Port:";
             labelPort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _textBoxHost
             // 
-            this._textBoxHost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._textBoxHost.Location = new System.Drawing.Point(81, 3);
-            this._textBoxHost.Name = "_textBoxHost";
-            this._textBoxHost.Size = new System.Drawing.Size(220, 19);
-            this._textBoxHost.TabIndex = 2;
-            this._textBoxHost.Text = "127.0.0.1";
+            _textBoxHost.Dock = System.Windows.Forms.DockStyle.Fill;
+            _textBoxHost.Location = new System.Drawing.Point(87, 4);
+            _textBoxHost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            _textBoxHost.Name = "_textBoxHost";
+            _textBoxHost.Size = new System.Drawing.Size(264, 23);
+            _textBoxHost.TabIndex = 2;
+            _textBoxHost.Text = "127.0.0.1";
             // 
             // _numericUpDownPort
             // 
-            this._numericUpDownPort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._numericUpDownPort.Location = new System.Drawing.Point(81, 28);
-            this._numericUpDownPort.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this._numericUpDownPort.Name = "_numericUpDownPort";
-            this._numericUpDownPort.Size = new System.Drawing.Size(220, 19);
-            this._numericUpDownPort.TabIndex = 4;
-            this._numericUpDownPort.Value = new decimal(new int[] {
-            9000,
-            0,
-            0,
-            0});
+            _numericUpDownPort.Dock = System.Windows.Forms.DockStyle.Fill;
+            _numericUpDownPort.Location = new System.Drawing.Point(87, 35);
+            _numericUpDownPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            _numericUpDownPort.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
+            _numericUpDownPort.Name = "_numericUpDownPort";
+            _numericUpDownPort.Size = new System.Drawing.Size(264, 23);
+            _numericUpDownPort.TabIndex = 4;
+            _numericUpDownPort.Value = new decimal(new int[] { 9000, 0, 0, 0 });
             // 
             // _buttonStartStop
             // 
-            tableLayoutPanel.SetColumnSpan(this._buttonStartStop, 2);
-            this._buttonStartStop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._buttonStartStop.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this._buttonStartStop.Location = new System.Drawing.Point(3, 78);
-            this._buttonStartStop.Name = "_buttonStartStop";
-            this._buttonStartStop.Size = new System.Drawing.Size(298, 40);
-            this._buttonStartStop.TabIndex = 7;
-            this._buttonStartStop.Text = "Start";
-            this._buttonStartStop.UseVisualStyleBackColor = true;
-            this._buttonStartStop.Click += new System.EventHandler(this.ButtonStartStop_Click);
+            tableLayoutPanel.SetColumnSpan(_buttonStartStop, 2);
+            _buttonStartStop.Dock = System.Windows.Forms.DockStyle.Fill;
+            _buttonStartStop.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
+            _buttonStartStop.Location = new System.Drawing.Point(4, 97);
+            _buttonStartStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            _buttonStartStop.Name = "_buttonStartStop";
+            _buttonStartStop.Size = new System.Drawing.Size(347, 50);
+            _buttonStartStop.TabIndex = 7;
+            _buttonStartStop.Text = "Start";
+            _buttonStartStop.UseVisualStyleBackColor = true;
+            _buttonStartStop.Click += ButtonStartStop_Click;
             // 
             // labelInterval
             // 
             labelInterval.AutoSize = true;
             labelInterval.Dock = System.Windows.Forms.DockStyle.Fill;
-            labelInterval.Location = new System.Drawing.Point(3, 50);
+            labelInterval.Location = new System.Drawing.Point(4, 62);
+            labelInterval.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             labelInterval.Name = "labelInterval";
-            labelInterval.Size = new System.Drawing.Size(72, 25);
+            labelInterval.Size = new System.Drawing.Size(75, 31);
             labelInterval.TabIndex = 5;
             labelInterval.Text = "Interval (ms):";
             labelInterval.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numericUpDownInterval
+            // _numericUpDownInterval
             // 
-            numericUpDownInterval.Dock = System.Windows.Forms.DockStyle.Fill;
-            numericUpDownInterval.Location = new System.Drawing.Point(81, 53);
-            numericUpDownInterval.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            numericUpDownInterval.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            numericUpDownInterval.Name = "numericUpDownInterval";
-            numericUpDownInterval.Size = new System.Drawing.Size(220, 19);
-            numericUpDownInterval.TabIndex = 6;
-            numericUpDownInterval.Value = new decimal(new int[] {
-            16,
-            0,
-            0,
-            0});
-            numericUpDownInterval.ValueChanged += new System.EventHandler(this.NumericUpDownInterval_ValueChanged);
+            _numericUpDownInterval.Dock = System.Windows.Forms.DockStyle.Fill;
+            _numericUpDownInterval.Location = new System.Drawing.Point(87, 66);
+            _numericUpDownInterval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            _numericUpDownInterval.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            _numericUpDownInterval.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            _numericUpDownInterval.Name = "_numericUpDownInterval";
+            _numericUpDownInterval.Size = new System.Drawing.Size(264, 23);
+            _numericUpDownInterval.TabIndex = 6;
+            _numericUpDownInterval.Value = new decimal(new int[] { 16, 0, 0, 0 });
+            _numericUpDownInterval.ValueChanged += NumericUpDownInterval_ValueChanged;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(304, 121);
-            this.Controls.Add(tableLayoutPanel);
-            this.Name = "MainForm";
-            this.Text = "OSC Rapid UseRight";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoSize = true;
+            ClientSize = new System.Drawing.Size(355, 151);
+            Controls.Add(tableLayoutPanel);
+            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Name = "MainForm";
+            Text = "OSC Rapid UseRight";
+            FormClosing += MainForm_FormClosing;
+            Load += MainForm_Load;
             tableLayoutPanel.ResumeLayout(false);
             tableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._numericUpDownPort)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(numericUpDownInterval)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)_numericUpDownPort).EndInit();
+            ((System.ComponentModel.ISupportInitialize)_numericUpDownInterval).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -193,6 +181,7 @@
         private System.Windows.Forms.TextBox _textBoxHost;
         private System.Windows.Forms.NumericUpDown _numericUpDownPort;
         private System.Windows.Forms.Button _buttonStartStop;
+        private System.Windows.Forms.NumericUpDown _numericUpDownInterval;
     }
 }
 

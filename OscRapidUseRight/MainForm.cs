@@ -29,6 +29,7 @@ namespace OscRapidUseRight
         public MainForm()
         {
             InitializeComponent();
+            _interval = (int)_numericUpDownInterval.Value;
         }
 
         /// <summary>

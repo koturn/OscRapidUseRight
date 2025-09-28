@@ -244,6 +244,9 @@ namespace OscRapidUseRight
         {
             ActiveControl = _buttonStartStop;
             var prop = Settings.Default;
+            _textBoxHost.Text = prop.Host;
+            _numericUpDownPort.Value = prop.Port;
+            _numericUpDownInterval.Value = prop.Interval;
             var index = _comboBoxHotKey.Items.IndexOf(prop.Key);
             if (index != -1)
             {
@@ -280,6 +283,9 @@ namespace OscRapidUseRight
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             var prop = Settings.Default;
+            prop.Host = _textBoxHost.Text;
+            prop.Port = (ushort)_numericUpDownPort.Value;
+            prop.Interval = (int)_numericUpDownInterval.Value;
             prop.Key = _comboBoxHotKey.SelectedItem as string;
             prop.IsShiftChecked = _checkBoxShift.Checked;
             prop.IsCtrlChecked = _checkBoxCtrl.Checked;

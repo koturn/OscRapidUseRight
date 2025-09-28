@@ -1,5 +1,8 @@
 using System;
+using System.Drawing;
 using System.Net.Sockets;
+using System.Reflection;
+
 #if !NET6_0_OR_GREATER
 using System.Text;
 #endif  // !NET6_0_OR_GREATER
@@ -242,6 +245,11 @@ namespace OscRapidUseRight
         /// <param name="e">Empty event data.</param>
         private void MainForm_Load(object sender, EventArgs e)
         {
+            var mrs = Assembly.GetExecutingAssembly().GetManifestResourceStream("OscRapidUseRight.icon.ico");
+            if (mrs != null)
+            {
+                Icon = new Icon(mrs);
+            }
             ActiveControl = _buttonStartStop;
             var prop = Settings.Default;
             _textBoxHost.Text = prop.Host;

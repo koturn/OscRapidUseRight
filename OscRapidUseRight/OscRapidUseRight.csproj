@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFrameworks>net9.0-windows;net481</TargetFrameworks>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -21,6 +22,10 @@
     <PackageTags>Windows;VRChat;OSC</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE">

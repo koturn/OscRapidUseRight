@@ -12,7 +12,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <LangVersion>13</LangVersion>
     <Title>OscRapidUseRight</Title>
-    <Version>1.0.2</Version>
+    <Version>1.1.0</Version>
     <Authors>koturn</Authors>
     <Company>koturn</Company>
     <Description>Tool for rapid-fire /input/UseRight</Description>
